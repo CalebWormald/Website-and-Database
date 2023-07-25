@@ -3,6 +3,14 @@ nav{
     color: #fffaff;
     font-size: 36px;
     font-family: 'Times New Roman', Times, serif;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+nav img{
+    background-color: #1e1b18;
+    max-width: 250px;
+    max-height: auto;
 }
 
 .links{
@@ -11,46 +19,59 @@ nav{
     padding-right: 10px;
 }
 
+a{
+    color: #f60000;
+}
+
 a:visited {
-    color: #d8315b;
+    color: #f60000;
 }
 
 a:hover {
-    color: #ff547f;
+    color: #f45959;
 }
   
 a:active {
-    color: #d8315b;
+    color: #f60000;
 }
 
 header{
     background-image: url("home.jpg");
-    padding-bottom: 20cm;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 25cm;
     max-width: 1440px;
     max-height: 200px;
-    z-index: -1;
+    text-align: center;
+}
+
+header img{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .content{
-    position: relative;
     font-family: 'Times New Roman', Times, serif;
-    z-index: auto;
+    margin: 10px;
 }
 
 .gallery {
-    margin: 5px;
+    padding: 3px;
     float: left;
     width: auto;
+    text-align: center;
 }
-  
-.gallery:hover {
-    border: 3px solid #777;
-}
-  
+    
 .gallery img {
-    width: 227px;
+    width: 225px;
     height: auto;
 }
+
+.row {
+    padding: 0px;
+    width: 100%;
+  }
 
 body{
     margin: 0cm;
