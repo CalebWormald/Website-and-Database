@@ -28,12 +28,17 @@ nav img{
 }
 
 
+.content .box a{
+    color: #ff000000;
+    text-decoration: none;
+}
+
 a{
-    color: #f60000;
+    color: #ff0000;
 }
 
 a:visited {
-    color: #f60000;
+    color: #ff0000;
 }
 
 a:hover {
@@ -55,9 +60,25 @@ a:active {
 }
   
 .gallery img {
-    width: 220px;
+    width: 225px;
     height: auto;
     text-align: center;
+}
+
+.gallery form {
+    margin: 5px;
+    float: left;
+    width: auto;
+}
+  
+.gallery form img {
+    width: 200px;
+    height: auto;
+    text-align: center;
+}
+
+#class{
+    visibility: hidden;
 }
 
 .row {
@@ -78,7 +99,7 @@ a:active {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    margin: 15px;
+    margin: 10px;
 }
 
 .content .box{
