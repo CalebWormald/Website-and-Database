@@ -1,14 +1,13 @@
 nav{
-    background-color: #1e1b18;
+    background-color: #000000;
     color: #fffaff;
-    font-size: 36px;
+    font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 nav img{
-    background-color: #1e1b18;
+    background-color: #000000;
     max-width: 250px;
     max-height: auto;
 }
@@ -16,15 +15,26 @@ nav img{
 .links{
     float: right;
     color: #fffaff;
-    padding-right: 10px;
+    padding-right: 15px;
+    text-decoration: none;
 }
 
+.links .button{
+    padding: 20px 5px 0 5px;
+    text-decoration: none;
+}
+
+/*.content .box a{
+    color: #ff000000;
+    text-decoration: none;
+}*/
+
 a{
-    color: #f60000;
+    color: #ff0000;
 }
 
 a:visited {
-    color: #f60000;
+    color: #ff0000;
 }
 
 a:hover {
@@ -36,10 +46,10 @@ a:active {
 }
 
 header{
-    background-image: url("home.jpg");
+    background-image: url("indeximage.png");
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 25cm;
+    padding-bottom: 23cm;
     max-width: 1440px;
     max-height: 200px;
     text-align: center;
@@ -54,36 +64,74 @@ header img{
 .content{
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
+    text-align: center;    
 }
-
-.gallery {
-    padding: 3px;
-    float: left;
-    width: auto;
-    text-align: center;
-}
-    
-.gallery img {
-    width: 225px;
-    height: auto;
-}
-
-.row {
-    padding: 0px;
-    width: 100%;
-  }
 
 body{
     margin: 0cm;
     padding: 0px;
     font-family: 'Times New Roman', Times, serif;
     background-color: #fffaff;
+    /* Set a minimum height to push the footer to the bottom */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+form{
+    color: #000000;
+    background-color: #fffaff;
+    font-size: 16px;
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    color: #000000; 
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+th, td{
+    background-color: #fffaff;
+    color:#000000;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+table{
+    background-color: #fffaff;
+    color:#000000;
+    width: 1000px;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+p{
+    text-align: center;
 }
 
 footer{
-    background-color: #1e1b18;
+    background-color: #000000;
     color: #3E92CC;
-    padding: 25px;  
+    padding: 25px; 
     text-align: center;  
+    font-size: large;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer1{
+    background-color: #000000;
+    color: #3E92CC;
+    padding: 25px; 
+    text-align: center;  
+    font-size: large;
 }
 
