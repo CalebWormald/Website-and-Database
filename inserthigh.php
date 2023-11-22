@@ -1,37 +1,10 @@
 <?php
-if(isset($_POST['insert']))
-{
+    //for local device/database
+    include("./includes/localconnect.php");
+    //for school database
     include("./includes/connect.php");
-    // get values form input text and number
-    $player = $_POST['player'];
-    $highscore = $_POST['highscore'];
-    $date = $_POST['date'];
-    $map = $_POST['map'];
-    $class = $_POST['class'];
-    $gamemode = $_POST['gamemode'];
 
-    // connect to mysql database using mysqli
-
-    // mysql query to insert data
-    $query = "INSERT INTO highscores (`player`, `highscore`, `date`, `map`, `class`, `gamemode`) VALUES ('$player','$highscore','$date','$map','$class','$gamemode')";
-    
-    $result = mysqli_query($conn, $query);
-
-    // check if mysql query successful
-    if($result){
-        echo 'Data Inserted';
-    }
-    else{
-        echo 'Data Not Inserted';
-    }
-
-    mysqli_close($conn);
-}
 ?>
-
-
-<!DOCTYPE html>
-
 <html>
 
 <head>
@@ -61,9 +34,10 @@ if(isset($_POST['insert']))
     <!-- Float links to the right -->
     <div class="links">
     <a href="inserthigh.php" class="button">Insert Speedruns</a>
-    <a href="insertplay.php" class="button">Insert Players</a>
-    <a href="searchhigh.php" class="button">Search Highscores</a>
-    <a href="searchplay.php" class="button">Search Players</a>
+            <a href="insertplay.php" class="button">Insert Players</a>
+            <a href="delete.php" class="button">Delete</a>
+            <a href="searchhigh.php" class="button">Search Highscores</a>
+            <a href="searchplay.php" class="button">Search Players</a>
     </div>
 </nav>
 <div class="content">
@@ -71,31 +45,61 @@ if(isset($_POST['insert']))
     <form action="inserthigh.php" method="post">
         
         <label for="player">Player:</label><br>
-        <input type="text" name="player" required placeholder="Player"><br><br>
+        <input type="text" id="player" name="player" required placeholder="Player"><br><br>
 
-        <label for="player">Highscore:</label><br>
-        <input type="number" name="highscore" required placeholder="Highscore" step="0.001" min="0" max="1000"><br><br>
+        <label for="highscore">Highscore:</label><br>
+        <input type="number" id="highscore" name="highscore" required placeholder="Highscore" step="0.001" min="0" max="1000"><br><br>
 
-        <label for="player">Date:</label><br>
-        <input type="date" name="date" required placeholder="Date"><br><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required placeholder="Date"><br><br>
 
-        <label for="player">Map:</label><br>
-        <input type="text" name="map" required placeholder="Map"><br><br>
+        <label for="map">Map:</label><br>
+        <input type="text" id="map" name="map" required placeholder="Map"><br><br>
 
-        <label for="player">Class:</label><br>
-        <input type="text" name="class" required placeholder="Class"><br><br>
+        <label for="class">Class:</label><br>
+        <input type="text" id="class" name="class" required placeholder="Class"><br><br>
 
-        <label for="player">Gamemode:</label><br>
-        <input type="text" name="gamemode" required placeholder="Gamemode"><br><br>
+        <label for="gamemode">Gamemode:</label><br>
+        <input type="text" id="gamemode" name="gamemode" required placeholder="Gamemode"><br><br>
+
 
         <input type="submit" name="insert" value="Add Data To Database">
 
     </form>
+
+<?php
+if(isset($_POST['insert']))
+{
+    // get values form input text and number
+    $player = $_POST['player'];
+    $highscore = $_POST['highscore'];
+    $date = $_POST['date'];
+    $map = $_POST['map'];
+    $class = $_POST['class'];
+    $gamemode = $_POST['gamemode'];
+
+    // mysql query to insert data
+    $query = "INSERT INTO highscores (`player`, `highscore`, `date`, `map`, `class`, `gamemode`) VALUES ('$player','$highscore','$date','$map','$class','$gamemode')";
+    
+    $result = mysqli_query($conn, $query);
+
+    // check if mysql query successful
+    if($result){
+        echo 'Data Inserted';
+    }
+    else{
+        echo 'Data Not Inserted';
+    }
+
+    mysqli_close($conn);
+}
+?>
 </div>
+</body>
 <!-- Footer -->
 <footer>
   <h5>Powered by Caleb Wormald</h5>
+  <p>&copy; 2023 Caleb Wormald</p>
 </footer>
-</body>
 
 </html>

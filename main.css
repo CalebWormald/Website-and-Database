@@ -1,3 +1,7 @@
+html{
+    height: 100%;
+}
+
 nav{
     background-color: #000000;
     color: #fffaff;
@@ -68,16 +72,10 @@ header img{
 }
 
 body{
-    margin: 0cm;
-    padding: 0px;
+    margin: 0;
     font-family: 'Times New Roman', Times, serif;
     background-color: #fffaff;
-    /* Set a minimum height to push the footer to the bottom */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
-
 
 form{
     color: #000000;
@@ -110,6 +108,7 @@ table{
     border-collapse: collapse;
     border: 1px solid #000000;
     padding: 10px;
+    justify-content: center;
 }
 
 p{
@@ -117,21 +116,9 @@ p{
 }
 
 footer{
-    background-color: #000000;
-    color: #3E92CC;
-    padding: 25px; 
-    text-align: center;  
-    font-size: large;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-}
-
-footer1{
+    height: 25px;  
     background-color: #000000;
     color: #3E92CC;
-    padding: 25px; 
-    text-align: center;  
-    font-size: large;
+    text-align: center;
 }
-

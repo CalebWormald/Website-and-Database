@@ -1,4 +1,8 @@
 <?php
+    //for local device/database
+    include("./includes/localconnect.php");
+    //for school database
+    include("./includes/connect.php");
 
 if(isset($_POST['search']))
 {
@@ -39,9 +43,10 @@ function filterTable($query)
     <!-- Float links to the right -->
     <div class="links">
     <a href="inserthigh.php" class="button">Insert Speedruns</a>
-    <a href="insertplay.php" class="button">Insert Players</a>
-    <a href="searchhigh.php" class="button">Search Highscores</a>
-    <a href="searchplay.php" class="button">Search Players</a>
+            <a href="insertplay.php" class="button">Insert Players</a>
+            <a href="delete.php" class="button">Delete</a>
+            <a href="searchhigh.php" class="button">Search Highscores</a>
+            <a href="searchplay.php" class="button">Search Players</a>
     </div>
 </nav>
 <h2>Search Players</h2>
@@ -72,6 +77,7 @@ function filterTable($query)
 <!-- Footer -->
 <footer>
   <h5>Powered by Caleb Wormald</h5>
+  <p>&copy; 2023 Caleb Wormald</p>
 </footer>
     </body>
 </html>
